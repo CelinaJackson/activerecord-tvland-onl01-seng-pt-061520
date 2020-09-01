@@ -3,6 +3,6 @@ class Show < ActiveRecord::Base
   has_many :characters
   
   def actors_list
-    "#{self.all.first_name} #{self.all.last_name}"
+    "#{characters.all.first_name} #{characters.all.last_name}"
   end 
 end
